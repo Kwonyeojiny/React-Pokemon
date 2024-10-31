@@ -8,6 +8,7 @@ export default {
       galmuri9: "Galmuri9",
       galmuri11: "Galmuri11",
       galmuri14: "Galmuri14",
+      dungGeunMo: "DungGeunMo",
     },
   },
   plugins: [],

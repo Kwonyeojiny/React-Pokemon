@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div className="font-galmuri9">
+    <div className="font-dungGeunMo">
       <h1 className="text-[40px] text-center">포켓몬 도감</h1>
       <nav className="flex gap-[20px] justify-center">
         <Link to={"/"}>메인</Link>
