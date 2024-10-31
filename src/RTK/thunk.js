@@ -13,7 +13,7 @@ export const fetchMultiplePokemonById = createAsyncThunk(
       const data = await response.json();
 
       const pokemonData = {
-        id: 1,
+        id: pokemonId,
         name: data.names.find((el) => el.language.name === "ko").name,
         description: data.flavor_text_entries.find(
           (el) => el.language.name === "ko"
