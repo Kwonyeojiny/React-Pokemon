@@ -6,6 +6,9 @@
   - Detail : 포켓몬 상세 정보를 표시
   - Favorite : 찜한 포켓몬 리스트를 표시
   - Search : 포켓몬 검색 결과 리스트를 표시
-- Context API, Redux, RTK 등 전역 상태 관리 도를 사용
+- Context API, Redux, RTK 등 전역 상태 관리 도구를 사용
 - Styled-Components, Tailwind CSS 등 스타일링 도구를 사용
 - (선택) 최적화 진행
+
+<hr/>
+
