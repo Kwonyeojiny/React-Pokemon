@@ -2,13 +2,14 @@ import { useEffect } from "react";
 import "./App.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMultiplePokemonById } from "./RTK/thunk";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import Main from "./pages/Main";
 import Detail from "./pages/Detail";
 import Search from "./pages/Search";
 import Favorite from "./pages/Favorite";
 
 function App() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   // store를 만들때 전달한 reducer에 이름으로 찍어준 값
   // const pokemonData = useSelector((state) => state.pokemon);
@@ -22,11 +23,18 @@ function App() {
   return (
     <div className="font-dungGeunMo">
       <h1 className="text-[40px] text-center">포켓몬 도감</h1>
-      <nav className="flex gap-[20px] justify-center">
+      <nav className="flex gap-[30px] justify-center">
         <Link to={"/"}>메인</Link>
-        <Link to={"/detail/1"}>상세정보</Link>
-        <Link to={"/search"}>검색</Link>
         <Link to={"/favorite"}>찜목록</Link>
+        <div>
+          <span>🔎</span>
+          <input
+            className="w-[120px] border-b border-[darkgray] px-2"
+            onChange={(e) => {
+              navigate(`/search?pokemon=${e.target.value}`);
+            }}
+          />
+        </div>
       </nav>
       <main className="flex flex-wrap gap-[20px] justify-center pt-[20px]">
         <Routes>
