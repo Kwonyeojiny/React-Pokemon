@@ -22,8 +22,10 @@ function App() {
 
   return (
     <div className="font-dungGeunMo">
-      <h1 className="text-[40px] text-center">포켓몬 도감</h1>
-      <nav className="flex gap-[30px] justify-center">
+      <h1 className="border-t-[50px] border-t-[red] bg-black text-white text-[40px] text-center">
+        포켓몬 도감
+      </h1>
+      <nav className="py-[10px] border-b-[3px] border-b-black flex gap-[30px] justify-center">
         <Link to={"/"}>메인</Link>
         <Link to={"/favorite"}>찜목록</Link>
         <div>
@@ -36,7 +38,7 @@ function App() {
           />
         </div>
       </nav>
-      <main className="flex flex-wrap gap-[20px] justify-center pt-[20px]">
+      <main className="bg-[gray] flex flex-wrap gap-[20px] justify-center pt-[20px] pb-[20px]">
         <Routes>
           <Route path={"/"} element={<Main />} />
           <Route path={"/detail/:pokemonId"} element={<Detail />} />

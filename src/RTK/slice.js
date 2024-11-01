@@ -26,3 +26,20 @@ export const pokemonSlice = createSlice({
       });
   },
 });
+
+export const favoriteSlice = createSlice({
+  name: "favorite",
+  initialState: [1, 2, 3],
+  reducers: {
+    // redux toolkit은 immer라는 도구를 내장
+    // 참조자료형을 건드려도 참조불변성 유지
+    // 복사해서 새로 만들어넣는거처럼 상태를 잘 업데이트 시켜줌
+    addToFavorite(state, action) {
+      state.push(action.payload.pokemonId);
+    },
+    removeFromFavorite(state, action) {
+      const index = state.indexOf(action.payload.pokemonId);
+      if (index !== -1) state.splice(index, 1);
+    },
+  },
+});
